@@ -162,20 +162,11 @@ header.scrolled {
 	color: inherit;
 }
 
-/* --- UPDATED LOGO CSS --- */
+/* --- UPDATED LOGO CSS (White color filters removed) --- */
 .logo-img {
 	height: 45px;
 	width: 45px;
 	transition: 0.3s;
-	filter: brightness(0) invert(1);
-}
-
-header.scrolled .logo-img {
-	filter: none;
-}
-
-[data-theme="dark"] header.scrolled .logo-img {
-	filter: brightness(0) invert(1);
 }
 /* ------------------------ */
 
