@@ -170,16 +170,18 @@
 			</div>
 		</header>
 
+		<!-- Added layout protection to keep hero content from spilling over lower elements -->
 		<section
 			id="home"
 			class="hero"
+			style="min-height: 100vh; padding: 120px 0 60px 0; display: flex; align-items: center; position: relative;"
 		>
 			<div class="hero-overlay"></div>
-			<div class="container hero-content">
-				<div style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; width: 100%; padding-top: 15px;">
+			<div class="container hero-content" style="width: 100%; position: relative; z-index: 2;">
+				<div style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; width: 100%;">
 					
 					<!-- HRDC Logo Container -->
-					<div style="flex: 0 0 auto; max-width: 230px; width: 100%; margin-top: -20px; position: relative; z-index: 5;">
+					<div style="flex: 0 0 auto; max-width: 230px; width: 100%; margin-top: -10px; position: relative; z-index: 5;">
 						<img
 							src="hrdc-logo.png"
 							alt="HRDC Approved Layout"
@@ -187,18 +189,18 @@
 						/>
 					</div>
 
-					<!-- Text Side Content (Updated with your exact requested copy) -->
+					<!-- Text Side Content -->
 					<div style="flex: 1; min-width: 280px;">
 						<div class="en-content">
-							<span class="hero-tag">360° Learning • 360° Well-being • 360° Leadership • 360° Sustainability</span>
-							<h1>360° Empowering Growth <br />from Every Angle</h1>
-							<p style="font-weight: 600; font-size: 1.25rem; margin-bottom: 10px; color: var(--text-light, #ffffff);">
+							<span class="hero-tag" style="display: inline-block; margin-bottom: 15px;">360° Learning • 360° Well-being • 360° Leadership • 360° Sustainability</span>
+							<h1 style="margin-bottom: 15px; line-height: 1.2;">360° Empowering Growth <br />from Every Angle</h1>
+							<p style="font-weight: 600; font-size: 1.25rem; margin-bottom: 15px; color: var(--text-light, #ffffff);">
 								Developing Competence, Character, Well-being & Sustainability
 							</p>
-							<p>
+							<p style="margin-bottom: 30px; line-height: 1.6;">
 								We empower individuals, organisations, and communities through professional training, consultancy, leadership development, workplace well-being, and sustainable growth initiatives.
 							</p>
-							<div class="hero-btns">
+							<div class="hero-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
 								<a
 									href="#services"
 									class="btn btn-primary"
@@ -212,13 +214,13 @@
 							</div>
 						</div>
 						<div class="cn-content">
-							<span class="hero-tag">360°学习 • 360°健康 • 360°领导力 • 360°永续发展</span>
-							<h1>360° 从每一个角度赋能成长</h1>
-							<p style="font-weight: 600; font-size: 1.25rem; margin-bottom: 10px; color: var(--text-light, #ffffff);">
+							<span class="hero-tag" style="display: inline-block; margin-bottom: 15px;">360°学习 • 360°健康 • 360°领导力 • 360°永续发展</span>
+							<h1 style="margin-bottom: 15px; line-height: 1.2;">360° 从每一个角度赋能成长</h1>
+							<p style="font-weight: 600; font-size: 1.25rem; margin-bottom: 15px; color: var(--text-light, #ffffff);">
 								培育专业能力、品格修养、健康福祉与永续价值
 							</p>
-							<p>我们通过专业培训、咨询服务、领导力发展、职场健康与永续成长方案，协助个人、组织及社区实现全面发展。</p>
-							<div class="hero-btns">
+							<p style="margin-bottom: 30px; line-height: 1.6;">我们通过专业培训、咨询服务、领导力发展、职场健康与永续成长方案，协助个人、组织及社区实现全面发展。</p>
+							<div class="hero-btns" style="display: flex; gap: 15px; flex-wrap: wrap;">
 								<a
 									href="#services"
 									class="btn btn-primary"
@@ -349,7 +351,7 @@
 
 						<div class="en-content">
 							<p>
-								<strong>Liew Chei Peng (Andrew)</strong> has spent over three decades building and transforming companies across multiple industries — from tax consultancy and property
+								<strong>Liew Chei Peng (Andrew)</strong> has spent over three decades building and transforming companies across[cite: 4] multiple industries — from tax consultancy and property
 								development to education, technology, oil & gas, and beyond. As a CFO, COO, and Client Director in multinational organisations, he led teams, shaped strategies, and
 								guided businesses through change.
 							</p>
@@ -366,7 +368,7 @@
 
 						<div class="cn-content">
 							<p>
-								<strong>廖志平（Andrew）</strong>在企业界打拼超过三十年，涉足税务咨询、房地产开发、建筑、石油天然气、科技、教育、娱乐与餐饮等多个领域。作为跨国公司的 CFO、COO
+								<strong>廖志平（Andrew）</strong>在企业界打拼超过三十年，涉足税务咨询、房地产开发、建筑、石油天然气、科技、教育、娱乐与餐饮等多个领域[cite: 4]。作为跨国公司的 CFO、COO
 								和客户总监，他带领团队、制定战略，并推动企业不断成长与转型。
 							</p>
 							<p>
@@ -479,80 +481,80 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="category-cell"><strong>Leadership, Character & Ethical Excellence</strong></td>
+								<td class="category-cell"><strong>Leadership, Character & Ethical Excellence</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>Leadership Development</li>
-										<li>Personal Responsibility</li>
-										<li>Ethics & Integrity</li>
-										<li>Women's Development</li>
-										<li>Professional Presence</li>
+										<li>Leadership Development[cite: 4]</li>
+										<li>Personal Responsibility[cite: 4]</li>
+										<li>Ethics & Integrity[cite: 4]</li>
+										<li>Women's Development[cite: 4]</li>
+										<li>Professional Presence[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>Women of Influence at Work: Developing Poise, Strength & Professional Presence</li>
-										<li>Beyond Success: Building a Legacy of Excellence</li>
-										<li>Creating Your Future: Personal Responsibility, Character & Success at Work</li>
-										<li>Excellence Powered with a Human Touch – Building Professionalism, Integrity & Workplace Harmony</li>
-									</ul>
-								</td>
-							</tr>
-							<tr>
-								<td class="category-cell"><strong>Workplace Health, Well-being & Resilience</strong></td>
-								<td>
-									<ul class="table-list">
-										<li>Physical Health</li>
-										<li>Mental Wellness</li>
-										<li>Emotional Resilience</li>
-										<li>Healthy Lifestyle</li>
-									</ul>
-								</td>
-								<td>
-									<ul class="table-list">
-										<li>Cancer Awareness at Work: What Every Employee Should Know</li>
-										<li>Holistic Wellbeing for the Workplace: Nutrition, Stress & Lifestyle Awareness</li>
-										<li>Workplace Wellness Essentials: Detox, Diet & Emotional Balance</li>
-										<li>Supporting Colleagues Facing Health Challenges: Body–Mind–Spirit Awareness</li>
+										<li>Women of Influence at Work: Developing Poise, Strength & Professional Presence[cite: 4]</li>
+										<li>Beyond Success: Building a Legacy of Excellence[cite: 4]</li>
+										<li>Creating Your Future: Personal Responsibility, Character & Success at Work[cite: 4]</li>
+										<li>Excellence Powered with a Human Touch – Building Professionalism, Integrity & Workplace Harmony[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
 							<tr>
-								<td class="category-cell"><strong>Business Excellence & Professional Competency</strong></td>
+								<td class="category-cell"><strong>Workplace Health, Well-being & Resilience</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>Productivity Improvement</li>
-										<li>Professional Communication</li>
-										<li>Business Management Skills</li>
-										<li>Technical & Professional Competencies</li>
+										<li>Physical Health[cite: 4]</li>
+										<li>Mental Wellness[cite: 4]</li>
+										<li>Emotional Resilience[cite: 4]</li>
+										<li>Healthy Lifestyle[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>The Art of Speaking for Workplace Excellence</li>
-										<li>Essential Corporate Income Tax Mastery for Malaysian Businesses</li>
+										<li>Cancer Awareness at Work: What Every Employee Should Know[cite: 4]</li>
+										<li>Holistic Wellbeing for the Workplace: Nutrition, Stress & Lifestyle Awareness[cite: 4]</li>
+										<li>Workplace Wellness Essentials: Detox, Diet & Emotional Balance[cite: 4]</li>
+										<li>Supporting Colleagues Facing Health Challenges: Body–Mind–Spirit Awareness[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
 							<tr>
-								<td class="category-cell"><strong>Sustainability, CSR & Responsible Living</strong></td>
+								<td class="category-cell"><strong>Business Excellence & Professional Competency</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>ESG Awareness</li>
-										<li>Corporate Social Responsibility</li>
-										<li>Sustainable Development</li>
-										<li>Environmental Stewardship</li>
-										<li>Community Impact</li>
+										<li>Productivity Improvement[cite: 4]</li>
+										<li>Professional Communication[cite: 4]</li>
+										<li>Business Management Skills[cite: 4]</li>
+										<li>Technical & Professional Competencies[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>The Unique and Powerful CSR Programme – Transform Your Workplace with Eco-Enzyme</li>
-										<li>ESG Awareness for Business Leaders</li>
-										<li>Sustainable Workplace Practices</li>
-										<li>Ethical Decision Making in Organisations</li>
-										<li>Personal Sustainability & Healthy Living</li>
-										<li>Eco-Enzyme Trainer Certification Programme</li>
+										<li>The Art of Speaking for Workplace Excellence[cite: 4]</li>
+										<li>Essential Corporate Income Tax Mastery for Malaysian Businesses[cite: 4]</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="category-cell"><strong>Sustainability, CSR & Responsible Living</strong>[cite: 4]</td>
+								<td>
+									<ul class="table-list">
+										<li>ESG Awareness[cite: 4]</li>
+										<li>Corporate Social Responsibility[cite: 4]</li>
+										<li>Sustainable Development[cite: 4]</li>
+										<li>Environmental Stewardship[cite: 4]</li>
+										<li>Community Impact[cite: 4]</li>
+									</ul>
+								</td>
+								<td>
+									<ul class="table-list">
+										<li>The Unique and Powerful CSR Programme – Transform Your Workplace with Eco-Enzyme[cite: 4]</li>
+										<li>ESG Awareness for Business Leaders[cite: 4]</li>
+										<li>Sustainable Workplace Practices[cite: 4]</li>
+										<li>Ethical Decision Making in Organisations[cite: 4]</li>
+										<li>Personal Sustainability & Healthy Living[cite: 4]</li>
+										<li>Eco-Enzyme Trainer Certification Programme[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
@@ -570,80 +572,80 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td class="category-cell"><strong>领导力、品格与道德卓越</strong></td>
+								<td class="category-cell"><strong>领导力、品格与道德卓越</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>领导力培养与影响力提升</li>
-										<li>责任意识与自我管理</li>
-										<li>职业道德与诚信文化</li>
-										<li>女性领导力与个人成长</li>
-										<li>专业形象与职场影响力塑造</li>
+										<li>领导力培养与影响力提升[cite: 4]</li>
+										<li>责任意识与自我管理[cite: 4]</li>
+										<li>职业道德与诚信文化[cite: 4]</li>
+										<li>女性领导力与个人成长[cite: 4]</li>
+										<li>专业形象与职场影响力塑造[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>职场影响力女性：培养优雅风范、内在力量与专业形象</li>
-										<li>超越成功：打造卓越传承之路</li>
-										<li>创造您的未来：个人责任、品格塑造与职场成功</li>
-										<li>以人为本的卓越经营——建立专业精神、诚信文化与和谐职场</li>
-									</ul>
-								</td>
-							</tr>
-							<tr>
-								<td class="category-cell"><strong>职场健康、福祉与心理韧性</strong></td>
-								<td>
-									<ul class="table-list">
-										<li>身体健康与疾病预防</li>
-										<li>心理健康与情绪管理</li>
-										<li>心理韧性与抗压能力</li>
-										<li>健康生活方式与自我照护</li>
-									</ul>
-								</td>
-								<td>
-									<ul class="table-list">
-										<li>职场癌症认知教育：每位员工都应了解的重要知识</li>
-										<li>职场全人健康：营养、压力管理与健康生活方式认知</li>
-										<li>职场健康管理基础：排毒、饮食与情绪平衡</li>
-										<li>支持面对健康挑战的同事：身、心、灵关怀与认知</li>
+										<li>职场影响力女性：培养优雅风范、内在力量与专业形象[cite: 4]</li>
+										<li>超越成功：打造卓越传承之路[cite: 4]</li>
+										<li>创造您的未来：个人责任、品格塑造与职场成功[cite: 4]</li>
+										<li>以人为本的卓越经营——建立专业精神、诚信文化与和谐职场[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
 							<tr>
-								<td class="category-cell"><strong>企业卓越管理与专业能力发展</strong></td>
+								<td class="category-cell"><strong>职场健康、福祉与心理韧性</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>生产力提升与绩效优化</li>
-										<li>专业沟通与表达技巧</li>
-										<li>商业管理与经营能力</li>
-										<li>专业知识与实务技能发展</li>
+										<li>身体健康与疾病预防[cite: 4]</li>
+										<li>心理健康与情绪管理[cite: 4]</li>
+										<li>心理韧性与抗压能力[cite: 4]</li>
+										<li>健康生活方式与自我照护[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>卓越职场沟通：专业表达与演说艺术</li>
-										<li>马来西亚企业必备：企业所得税实务精要</li>
+										<li>职场癌症认知教育：每位员工都应了解的重要知识[cite: 4]</li>
+										<li>职场全人健康：营养、压力管理与健康生活方式认知[cite: 4]</li>
+										<li>职场健康管理基础：排毒、饮食与情绪平衡[cite: 4]</li>
+										<li>支持面对健康挑战的同事：身、心、灵关怀与认知[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
 							<tr>
-								<td class="category-cell"><strong>永续发展、企业社会责任与责任实践</strong></td>
+								<td class="category-cell"><strong>企业卓越管理与专业能力发展</strong>[cite: 4]</td>
 								<td>
 									<ul class="table-list">
-										<li>ESG（环境、社会与治理）认知</li>
-										<li>企业社会责任实践</li>
-										<li>永续发展与绿色经营</li>
-										<li>环境保护与资源管理</li>
-										<li>社区关怀与社会贡献</li>
+										<li>生产力提升与绩效优化[cite: 4]</li>
+										<li>专业沟通与表达技巧[cite: 4]</li>
+										<li>商业管理与经营能力[cite: 4]</li>
+										<li>专业知识与实务技能发展[cite: 4]</li>
 									</ul>
 								</td>
 								<td>
 									<ul class="table-list">
-										<li>独特而强大的企业社会责任（CSR）计划——以环保酵素转化您的职场文化</li>
-										<li>企业领导者ESG认知</li>
-										<li>企业永续实践与绿色职场</li>
-										<li>企业道德决策与责任管理</li>
-										<li>个人永续生活与健康管理</li>
-										<li>环保酵素培训师认证课程</li>
+										<li>卓越职场沟通：专业表达与演说艺术[cite: 4]</li>
+										<li>马来西亚企业必备：企业所得税实务精要[cite: 4]</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="category-cell"><strong>永续发展、企业社会责任与责任实践</strong>[cite: 4]</td>
+								<td>
+									<ul class="table-list">
+										<li>ESG（环境、社会与治理）认知[cite: 4]</li>
+										<li>企业社会责任实践[cite: 4]</li>
+										<li>永续发展与绿色经营[cite: 4]</li>
+										<li>环境保护与资源管理[cite: 4]</li>
+										<li>社区关怀与社会贡献[cite: 4]</li>
+									</ul>
+								</td>
+								<td>
+									<ul class="table-list">
+										<li>独特而强大的企业社会责任（CSR）计划——以环保酵素转化您的职场文化[cite: 4]</li>
+										<li>企业领导者ESG认知[cite: 4]</li>
+										<li>企业永续实践与绿色职场[cite: 4]</li>
+										<li>企业道德决策与责任管理[cite: 4]</li>
+										<li>个人永续生活与健康管理[cite: 4]</li>
+										<li>环保酵素培训师认证课程[cite: 4]</li>
 									</ul>
 								</td>
 							</tr>
