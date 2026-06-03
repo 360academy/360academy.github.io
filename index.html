@@ -170,7 +170,6 @@
 			</div>
 		</header>
 
-		<!-- Added layout protection to keep hero content from spilling over lower elements -->
 		<section
 			id="home"
 			class="hero"
@@ -332,12 +331,13 @@
 		>
 			<div class="container">
 				<div class="split-layout trainer-layout">
-					<div class="split-image">
+					<div class="split-image" style="position: relative;">
 						<img
 							src="profile.png"
 							alt="Andrew Liew"
 						/>
-						<div class="floating-name-card">
+						<!-- Forced relative/static flow via inline style to prevent the element from jumping to the hero section -->
+						<div class="floating-name-card" style="position: relative; top: auto; left: auto; transform: none; margin-top: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: center; width: 100%; max-width: 100%;">
 							<h4>Liew Chei Peng (Andrew)</h4>
 							<span>HRDC Accredited Trainer</span>
 						</div>
