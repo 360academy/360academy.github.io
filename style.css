@@ -730,3 +730,8 @@ footer {
 		font-size: 0.9rem;
 	}
 }
+
+.table-list-item a:hover {
+    text-decoration: underline !important;
+    opacity: 0.85;
+}
