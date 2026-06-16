@@ -125,7 +125,19 @@ img {
 body.lang-en .cn-content {
 	display: none !important;
 }
+body.lang-en .ms-content {
+	display: none !important;
+}
 body.lang-cn .en-content {
+	display: none !important;
+}
+body.lang-cn .ms-content {
+	display: none !important;
+}
+body.lang-ms .en-content {
+	display: none !important;
+}
+body.lang-ms .cn-content {
 	display: none !important;
 }
 

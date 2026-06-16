@@ -1,6 +1,8 @@
 // --- CONFIGURATION ---
 const LANG_STORAGE_KEY = "360_lang"
 const THEME_STORAGE_KEY = "360_theme"
+const SUPPORTED_LANGS = ["en", "cn", "ms"]
+const LANG_DISPLAY = { en: "EN", cn: "CN", ms: "BM" }
 
 // --- ELEMENTS ---
 const body = document.body
@@ -14,34 +16,36 @@ const navLinksItems = document.querySelectorAll(".nav-link, .btn-nav")
 
 // --- FUNCTIONS ---
 
-// 1. Language Toggle
+// 1. Language Toggle (now cycles through 3 languages)
+function getCurrentLang() {
+	if (body.classList.contains("lang-cn")) return "cn"
+	if (body.classList.contains("lang-ms")) return "ms"
+	return "en"
+}
+
 function setLanguage(lang) {
-	if (lang === "cn") {
-		body.classList.remove("lang-en")
-		body.classList.add("lang-cn")
-		langText.textContent = "CN"
+	// Remove all language classes
+	body.classList.remove("lang-en", "lang-cn", "lang-ms")
+	// Add the target language class
+	body.classList.add("lang-" + lang)
+	
+	// Update the language button text
+	langText.textContent = LANG_DISPLAY[lang] || "EN"
 
-		// Update Nav Links Text
-		navLinksItems.forEach((link) => {
-			const cnText = link.getAttribute("data-cn")
-			if (cnText) link.textContent = cnText
-		})
-	} else {
-		body.classList.remove("lang-cn")
-		body.classList.add("lang-en")
-		langText.textContent = "EN"
-
-		navLinksItems.forEach((link) => {
-			const enText = link.getAttribute("data-en")
-			if (enText) link.textContent = enText
-		})
-	}
+	// Update Nav Links Text
+	navLinksItems.forEach((link) => {
+		const text = link.getAttribute("data-" + lang)
+		if (text) link.textContent = text
+	})
+	
 	localStorage.setItem(LANG_STORAGE_KEY, lang)
 }
 
-function toggleLanguage() {
-	const isEnglish = body.classList.contains("lang-en")
-	setLanguage(isEnglish ? "cn" : "en")
+function cycleLanguage() {
+	const current = getCurrentLang()
+	let nextIndex = (SUPPORTED_LANGS.indexOf(current) + 1) % SUPPORTED_LANGS.length
+	const nextLang = SUPPORTED_LANGS[nextIndex]
+	setLanguage(nextLang)
 }
 
 // 2. Theme Toggle
@@ -91,7 +95,7 @@ navLinksItems.forEach((item) => {
 })
 
 // --- EVENT LISTENERS ---
-langBtn.addEventListener("click", toggleLanguage)
+langBtn.addEventListener("click", cycleLanguage)
 themeBtn.addEventListener("click", toggleTheme)
 window.addEventListener("scroll", handleScroll)
 mobileMenuBtn.addEventListener("click", toggleMobileMenu)
@@ -99,8 +103,12 @@ mobileMenuBtn.addEventListener("click", toggleMobileMenu)
 // --- INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", () => {
 	// Load Language
-	const savedLang = localStorage.getItem(LANG_STORAGE_KEY) || "en"
-	setLanguage(savedLang)
+	const savedLang = localStorage.getItem(LANG_STORAGE_KEY)
+	if (savedLang && SUPPORTED_LANGS.includes(savedLang)) {
+		setLanguage(savedLang)
+	} else {
+		setLanguage("en")
+	}
 
 	// Load Theme
 	const savedTheme = localStorage.getItem(THEME_STORAGE_KEY)
